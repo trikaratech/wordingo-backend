@@ -107,6 +107,15 @@ if (!process.env.VERCEL) {
   });
 }
 
+
+app.get('/', (req, res) => {
+  res.json({
+    success: true,
+    message: 'API running at /api/* routes'
+  });
+});
+
+
 // Vercel uses the export — must ALWAYS be defined
 export default app;
 
