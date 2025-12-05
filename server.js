@@ -44,13 +44,14 @@ if (!process.env.VERCEL) {
 // CORS
 app.use(
   cors({
-    origin:
-      process.env.NODE_ENV === 'production'
-        ? ['https://your-frontend-url.vercel.app']
-        : ['http://localhost:3000'],
+    origin: [
+      "https://wordingo-frontend.vercel.app",
+      "http://localhost:3000"
+    ],
     credentials: true,
   })
 );
+
 
 app.use(express.json({ limit: '10mb' }));
 app.use(express.urlencoded({ extended: true }));
